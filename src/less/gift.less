@@ -1,0 +1,56 @@
+.gift {
+  // padding-top: 90px;
+  // padding-bottom: 124px;
+  background-color: @grey;
+
+  &__content {
+    .row-flex();
+    height: 577px
+  }
+
+  &__left {
+    .col();
+    .size(4);
+  }
+
+  &__list {
+    .col();
+    .size(4);
+  }
+
+  &__item {
+    width: 413px;
+    height: 202px;
+    border-radius: 5px;
+    padding-top: 13px;
+    padding-left: 31px;
+    padding-bottom: 16px;
+    color: @white;
+
+    &:not(:last-child){
+      margin-bottom: 16px;
+    }
+    
+    &:first-child {
+      background-color: @accent;
+    }
+    &:nth-child(2) {
+      background-color: @blue;
+    }
+    &:last-child {
+      background-color: @light_blue;
+    }
+  }
+
+  &__right {
+    .col();
+    .size(4);
+    position: relative;
+
+    img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}

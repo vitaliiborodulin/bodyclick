@@ -1,0 +1,95 @@
+// USER VARIABLES SECTION
+
+@accent: #EF7239; // Accent Color
+@fontsize: 16px; // Body Font Size
+@lineheight: 1.875; // Document Line Height
+@white: #ffffff;
+@black: #2F2B32;
+@grey: #F5F6F7;
+@dark_grey: #5D5C63;
+@blue: #077EB9;
+@light_blue: #98B7D7;
+
+
+@userfont: 'Ubuntu', sans-serif;
+@systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+
+.font(@fname, @fstyle, @fweight, @furl) {
+	@font-face {
+		font-family: @fname;
+		font-style: @fstyle;
+		font-weight: @fweight;
+		font-display: swap;
+		src: url(@furl) format('woff2');
+	}
+}
+
+// .font('Modelica', normal, 400, '../fonts/Modelica-Regular.woff2');
+// .font('Modelica', normal, 700, '../fonts/Modelica-Bold.woff2');
+// .font('Modelica', normal, 900, '../fonts/Modelica-Black.woff2');
+
+// .font('GeoSlb', normal, 400, '../fonts/GeoSlb-Regular.woff2');
+
+// GENERAL DOCUMENT STYLES
+
+.reset();
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.container {
+	.wrapper();
+}
+
+// .container-full {
+//   .wrapper-full();
+//   max-width: 1920px;
+//   margin: 0 auto;
+// }
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: @accent;
+	color: #fff;
+}
+
+// input, textarea {
+// 	outline: none;
+// 	&:focus:required:invalid { border: 3px solid @accent }
+// 	&:required:valid { border: 3px solid green }
+// }
+
+// .scroll-disabled {
+//   overflow: hidden;
+// }
+
+body {
+	font-family: @userfont;
+	font-size: @fontsize;
+	font-weight: 400;
+	// line-height: @lineheight;
+	color: @black;
+	min-width: 320px;
+  // min-height: 100vh;
+  position: relative;
+}
+
+section, header, footer {
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 147.86%;
+
+  text-align: center;
+  text-transform: uppercase;
+}

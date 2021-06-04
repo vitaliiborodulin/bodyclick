@@ -1,0 +1,83 @@
+.hero {
+  min-height: 1026px;
+  background: @grey url(../img/hero-bg.jpg) no-repeat center/cover;
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__content {
+    padding-top: 100px;
+    padding-bottom: 337px;
+  }
+
+  &__text {
+    h1 {
+      margin-bottom: 40px;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 158.5%;
+      text-transform: uppercase;
+      span {
+        display: block;
+        font-style: italic;
+        font-weight: 500;
+        color: @dark_grey;
+      }
+    }
+  }
+
+  &__descr {
+    margin-bottom: 64px;
+    max-width: 484px;
+    font-size: 20px;
+    line-height: 128.03%;
+    text-transform: lowercase;
+    color: rgba(47, 43, 50, 0.7);
+  }
+
+  &__btn {
+    width: 290px;
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 56px;
+  }
+
+  &__girl {
+    position: absolute;
+    left: 55%;
+    bottom: 0;
+    z-index: 4;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__iphone {
+    position: absolute;
+    left: 20%;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    &::before {
+      position: absolute;
+      left: 110px;
+      top: -27px;
+      font-weight: 700;
+      font-size: 36px;
+      content: 'iPhone 12';
+      display: block;
+      z-index: 3;
+    }
+    &::after {
+      position: absolute;
+      left: 110px;
+      top: 13px;
+      font-size: 24px;
+      content: 'ютиб ол';
+      display: block;
+      z-index: 3;
+    }
+  }
+
+}

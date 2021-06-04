@@ -5,12 +5,21 @@
 
   &__title {
     margin-bottom: 2px;
+    .sm-block({
+      font-size: 20px;
+      line-height: 26px;
+    });
   }
 
   &__subtitle {
     margin-bottom: 56px;
     font-size: 24px;
     line-height: 47px;
+    .sm-block({
+      font-size: 16px;
+      line-height: 21px;
+      margin-bottom: 20px;
+    })
   }
 
   &__list {
@@ -29,6 +38,7 @@
     img {
       margin-bottom: 27px;
     }
+    .sm(margin-bottom, 10px);
   }
 
   &__caption {
@@ -36,7 +46,7 @@
     font-size: 36px;
     margin-bottom: 18px;
     // line-height: 196.36%;
-    .xs(font-size, 24px);
+    .sm(font-size, 24px);
   }
 
   &__price {
@@ -45,7 +55,10 @@
     font-size: 24px;
     // line-height: 196%;
     color: @blue;
-    .xs(font-size, 18px);
+    .sm-block({
+      margin-bottom: 25px;
+      font-size: 18px;
+    });
   }
 
   &__descr {
@@ -53,7 +66,7 @@
     margin: 0 auto;
     font-size: 18px;
     line-height: 148%;
-    .xs-block({
+    .sm-block({
       font-size: 16px;
       line-height: 130%;
     });

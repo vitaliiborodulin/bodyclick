@@ -136,8 +136,8 @@ const copy = () => {
 	return gulp.src([
 		"src/fonts/**/*",
 		"src/files/**/*",
-		"src/favicon.*",
-		// "src/favicon.png",
+		// "src/favicon.*",
+		"src/favicon.ico",
 		"src/*.php",
 	], {
 		base: 'src'

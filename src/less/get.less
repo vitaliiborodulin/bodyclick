@@ -3,12 +3,18 @@
   &__content {
     position: relative;
     min-height: 742px;
+    .sm(min-height, 527px);
   }
 
   .get__girl {
     position: absolute;
     left: 0;
     bottom: 0;
+    .sm-block({
+      width: 200px;
+      height: 323px;
+      left: -20px;
+    });
   }
 
   &__title {
@@ -20,17 +26,27 @@
     text-transform: uppercase;
     font-weight: 500;
     font-size: 30px;
-    line-height: 183.4%;
+    line-height: 183%;
     color: @dark_grey;
+
+    .lg(font-size, 25px);
+    .sm-block({
+      max-width: 210px;
+      font-size: 16px;
+      line-height: 26px;
+      left: unset;
+      right: 0;
+      top: 35%;
+    });
   }
 
   &__btn {
     margin: 0 auto;
     // margin-bottom: 170px;
-    
+    .sm-block({
+      max-width: 100%;
+      font-size: 11px;
+    })
 
-    
-
-   
   }
 }

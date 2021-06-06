@@ -1,0 +1,73 @@
+.meal {
+  padding-top: 68px;
+  background: @white url(../img/svg/meal-bg.svg) no-repeat right bottom/contain;
+  .sm(padding-top, 28px)
+  ;
+  &__content {
+    .row-flex();
+  }
+
+  &__title {
+    position: relative;
+    text-align: left;
+    margin-bottom: 38px;
+    font-weight: 700;
+    .sm-block({
+      font-size: 24px;
+      line-height: 31px;
+    });
+    &::after {
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: -31px;
+      width: 248px;
+      height: 3px;
+      background-color: #EF7239;
+      .sm-block({
+        bottom: -18px;
+        width: 171px;
+      });
+    }
+  }
+
+  &__girl {
+    .col();
+    .size(4);
+    // .size-sm(3);
+    position: relative;
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      .md-block({
+        width: 133px;
+        height: 247px;
+      });
+      .sm-block({
+        width: 91px;
+        height: 168px;
+      })
+    }
+    
+  }
+
+  &__food {
+    .col();
+    .size(8);
+    // .size-sm(9);
+    img {
+      border-radius: 5px;
+      margin-bottom: 70px;
+      .md-block({
+        margin-bottom: 0;
+        width: 453px;
+        height: 256px;
+      });
+      .sm-block({
+        width: 284px;
+        height: 178px;
+      });
+    }
+  }
+}

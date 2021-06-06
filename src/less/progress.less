@@ -1,9 +1,18 @@
 .progress {
   padding-top: 127px;
   background: url(../img/svg/progress-bg.svg) no-repeat 56% 5%;
+  .md(padding-top, 47px);
+  .sm-block({
+    background: url(../img/svg/progress-mob-bg.svg) no-repeat 0 80%;
+  });
 
   &__title {
     margin-bottom: 98px;
+    .md(margin-bottom, 45px);
+    .sm-block({
+      font-size: 20px;
+      line-height: 29px;
+    });
   }
 
   &__list {
@@ -17,9 +26,19 @@
     margin-bottom: 48px;
     padding-left: 133px;
     width: 50%;
+    .lg(width, 60%);
+    .md-block({
+      width: 100%;
+    });
 
     font-size: 18px;
     line-height: 26px;
+
+    .sm-block({
+      padding-left: 100px;
+      font-size: 12px;
+      line-height: 16px;
+    });
 
     &::before {
       position: absolute;
@@ -28,52 +47,67 @@
       top: 50%;
       transform: translateY(-50%);
       width: 118px;
-      height: 117px;
+      height: 118px;
+      .sm-block({
+        width: 90px;
+        height: 90px;
+      });
     }
 
     &:nth-child(2n) {
       align-self: flex-end;
+      .md-block({
+        padding-left: 0;
+        padding-right: 133px;
+      });
+      .sm(padding-right, 100px);
+      &::before {
+        .md-block({
+          left: unset;
+          right: 0;
+        });
+      }
     }
 
     &:first-child {
       &::before {
-        background: url(../img/progress-1.png) no-repeat;
+        background: url(../img/progress-1.png) no-repeat center/cover;
       }
     }
 
     &:nth-child(2){
       &::before {
-        background: url(../img/progress-2.png) no-repeat;
+        background: url(../img/progress-2.png) no-repeat center/cover;
       }
     }
 
     &:nth-child(3){
       &::before {
-        background: url(../img/progress-3.png) no-repeat;
+        background: url(../img/progress-3.png) no-repeat center/cover;
       }
     }
 
     &:nth-child(4){
       &::before {
-        background: url(../img/progress-4.png) no-repeat;
+        background: url(../img/progress-4.png) no-repeat center/cover;
       }
     }
 
     &:nth-child(5){
       &::before {
-        background: url(../img/progress-5.png) no-repeat;
+        background: url(../img/progress-5.png) no-repeat center/cover;
       }
     }
 
     &:nth-child(6){
       &::before {
-        background: url(../img/progress-6.png) no-repeat;
+        background: url(../img/progress-6.png) no-repeat center/cover;
       }
     }
 
     &:nth-child(7){
       &::before {
-        background: url(../img/progress-7.png) no-repeat;
+        background: url(../img/progress-7.png) no-repeat center/cover;
       }
     }
   }

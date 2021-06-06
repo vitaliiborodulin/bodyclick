@@ -1,5 +1,5 @@
 # bodyclick
 
-[Сайт фитнеса](http://bodyclick.uz/)
+[bodyclick.uz](https://bodyclick.uz/)
 
 

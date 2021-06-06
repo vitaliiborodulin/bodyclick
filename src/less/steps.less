@@ -1,11 +1,18 @@
 .steps {
   padding-top: 88px;
   padding-bottom: 140px;
-
   text-align: center;
+  .md-block({
+    padding-top: 27px;
+  });
 
   &__title {
     margin-bottom: 65px;
+    .md-block({
+      margin-bottom: 29px;
+      font-size: 20px;
+      line-height: 26px;
+    });
   }
 
   &__list {
@@ -20,7 +27,11 @@
     min-height: 300px;
     padding-top: 194px;
     margin-bottom: 70px;
-    line-height: 148.86%;
+    line-height: 149%;
+    .md-block({
+      margin-bottom: 25px;
+      padding-top: 185px;
+    });
 
     br {
       .lg(display, none);
@@ -29,30 +40,37 @@
     .sm-block({
       font-size: 12px;
       line-height: 120%;
+      padding-top: 175px;
     });
 
     &:first-child {
       background: @white url(../img/steps-1.png) no-repeat top center;
+      .sm(background-size, contain);
     }
 
     &:nth-child(2) {
       background: @white url(../img/steps-2.png) no-repeat top center;
+      .sm(background-size, contain);
     }
 
     &:nth-child(3) {
       background: @white url(../img/steps-3.png) no-repeat top center;
+      .sm(background-size, contain);
     }
 
     &:nth-child(4) {
       background: @white url(../img/steps-4.png) no-repeat top center;
+      .sm(background-size, contain);
     }
 
     &:nth-child(5) {
       background: @white url(../img/steps-5.png) no-repeat top center;
+      .sm(background-size, contain);
     }
 
     &:nth-child(6) {
       background: @white url(../img/steps-6.png) no-repeat top center;
+      .sm(background-size, contain);
     }
   }
 

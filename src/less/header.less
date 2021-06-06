@@ -5,11 +5,21 @@
   justify-content: space-between;
   align-items: center;
 
+  &__logo {
+    img {
+      .sm-block({
+        width: 75px;
+        height: 55px;
+      });
+    }
+  }
+
   &__lang {
     font-weight: 500;
     font-size: 30px;
     line-height: 126.03%;
     transition: all 0.3s ease;
+    .sm(font-size, 13px);
 
     display: flex;
 
@@ -25,6 +35,7 @@
           position: absolute;
           content: '/';
           right: -18px;
+          .sm(right, -14px);
           top: 0;
         }
       }
@@ -57,7 +68,7 @@
       font-size: 30px;
       line-height: 126.03%;
       transition: all 0.3s ease;
-      // .sm(font-size, 12px);
+      .sm(font-size, 12px);
 
       &:hover {
         color: @accent;
@@ -74,14 +85,19 @@
           top: 0;
           width: 38px;
           height: 38px;
-          // .sm-block({
-          //   left: -18px;
-          //   width: 13px;
-          //   height: 13px;
-          // });
+          .sm-block({
+            left: -18px;
+            width: 13px;
+            height: 13px;
+          });
           background: url(../img/svg/phone.svg) no-repeat;
         }
       }
     }
+  }
+
+  &__mobile {
+    display: none;
+    .sm(display, block);
   }
 }

@@ -1,19 +1,19 @@
 var btnOpen = document.querySelectorAll('.btn');
-var modal = document.getElementById('wrapper-modal');
+var modalForm = document.getElementById('form');
 
-var overlay = document.getElementById('overlay');
-var btnClose = document.getElementById('btn-close');
+var overlayForm = document.querySelector('#form .overlay');
+var btnCloseForm = document.querySelector('#form .btn-close');
 
 for (var i = 0; i < btnOpen.length; i++) {
   btnOpen[i].addEventListener('click', function (e) {
     e.preventDefault();
-    modal.classList.add('active');
+    modalForm.classList.add('active');
   });
 }
 
 function closeModal() {
-  modal.classList.remove('active');
+  modalForm.classList.remove('active');
 }
 
-overlay.addEventListener('click', closeModal);
-// btnClose.addEventListener('click', closeModal);
+overlayForm.addEventListener('click', closeModal);
+btnCloseForm.addEventListener('click', closeModal);

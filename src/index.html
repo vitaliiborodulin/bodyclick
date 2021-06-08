@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,700&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" href="css/styles.css?v=6">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 
 <body class="content-uz">
@@ -73,7 +74,36 @@
 	//= html/uz/modal.html
 	<!-- end modal -->
 
-	<script src="js/script.js?v=5"></script>
+	<script defer src="js/script.js?v=5"></script>
+  <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+      var swiper = new Swiper('.swiper-container', {
+      // Optional parameters
+      direction: 'horizontal',
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      mousewheel: true,
+      autoplay: {
+        delay: 5000,
+      },
+      breakpoints: {
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          centeredSlides: true
+        }
+      },
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+
+    });});
+  </script>
 
   <!-- leeloo init code -->
   <script>

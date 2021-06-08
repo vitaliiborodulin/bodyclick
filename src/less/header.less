@@ -31,11 +31,14 @@
       &:first-child {
         margin-right: 25px;
         position: relative;
+        .sm(margin-right, 10px);
         &::after {
           position: absolute;
           content: '/';
           right: -18px;
-          .sm(right, -14px);
+          .sm-block({
+            right: -8px;
+          });
           top: 0;
         }
       }
@@ -68,7 +71,7 @@
       font-size: 30px;
       line-height: 126.03%;
       transition: all 0.3s ease;
-      .sm(font-size, 12px);
+      .sm(font-size, 15px);
 
       &:hover {
         color: @accent;

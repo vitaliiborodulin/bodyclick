@@ -3,6 +3,9 @@
   min-height: 1026px;
   overflow-x: hidden;
   .md(min-height, 656px);
+  .sm-block({
+    background: @grey url(../img/hero-mob-bg.jpg) no-repeat center/cover;
+  });
 
   &__wrapper {
     position: relative;
@@ -109,7 +112,7 @@
       z-index: 3;
       .lg-block({
         font-size: 18px;
-        top: -11px;
+        top: -13px;
         left: 80px;
       });
     }
@@ -122,7 +125,7 @@
       display: block;
       z-index: 3;
       .lg-block({
-        font-size: 12px;
+        font-size: 16px;
         left: 80px;
       });
     }

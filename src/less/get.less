@@ -1,5 +1,8 @@
 .get {
-  background: @white url(../img/get-bg.jpg) no-repeat left bottom/contain;
+  // background: @white url(../img/get-bg.jpg) no-repeat left bottom/contain;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
   &__content {
     position: relative;
     min-height: 742px;
@@ -38,15 +41,21 @@
       right: 0;
       top: 35%;
     });
+
+    br {
+      .lg(display, none);
+    }
   }
 
   &__btn {
+    width: 375px;
     margin: 0 auto;
     // margin-bottom: 170px;
     .sm-block({
       max-width: 100%;
       font-size: 11px;
-    })
+    });
+    .xs(font-size, 9px);
 
   }
 }

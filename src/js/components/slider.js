@@ -4,10 +4,10 @@ var swiper = new Swiper('.swiper-container', {
   slidesPerView: 1,
   spaceBetween: 20,
   loop: true,
-  // mousewheel: true,
-  // autoplay: {
-  //   delay: 5000,
-  // },
+  mousewheel: true,
+  autoplay: {
+    delay: 5000,
+  },
   breakpoints: {
     992: {
       slidesPerView: 3,

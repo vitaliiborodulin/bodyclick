@@ -3,119 +3,123 @@
 
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Body Click</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Body Click</title>
 
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,700&display=swap"
+    rel="stylesheet">
 
-	<link rel="stylesheet" href="css/styles.css?v=6">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/styles.css?v=6">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
 </head>
 
 <body class="content-uz">
 
   <!-- hero -->
-	//= html/uz/hero.html
-	<!-- end hero -->
+  //= html/uz/hero.html
+  <!-- end hero -->
 
   <!-- slider-top -->
-	//= html/uz/slider-top.html
-	<!-- end slider-top -->
+  //= html/uz/slider-top.html
+  <!-- end slider-top -->
 
   <!-- steps -->
-	//= html/uz/steps.html
-	<!-- end steps -->
+  //= html/uz/steps.html
+  <!-- end steps -->
 
   <!-- specialists -->
-	//= html/uz/specialists.html
-	<!-- end specialists -->
+  //= html/uz/specialists.html
+  <!-- end specialists -->
 
   <!-- advantages -->
-	//= html/uz/advantages.html
-	<!-- end advantages -->
+  //= html/uz/advantages.html
+  <!-- end advantages -->
 
   <!-- results -->
-	//= html/uz/results.html
-	<!-- end results -->
+  //= html/uz/results.html
+  <!-- end results -->
 
   <!-- meal -->
-	//= html/uz/meal.html
-	<!-- end meal -->
+  //= html/uz/meal.html
+  <!-- end meal -->
 
   <!-- progress -->
-	//= html/uz/progress.html
-	<!-- end progress -->
+  //= html/uz/progress.html
+  <!-- end progress -->
 
   <!-- slider-bottom -->
-	//= html/uz/slider-bottom.html
-	<!-- end slider-bottom -->
+  //= html/uz/slider-bottom.html
+  <!-- end slider-bottom -->
 
   <!-- gift -->
-	//= html/uz/gift.html
-	<!-- end gift -->
+  //= html/uz/gift.html
+  <!-- end gift -->
 
   <!-- tarif -->
-	//= html/uz/tarif.html
-	<!-- end tarif -->
+  //= html/uz/tarif.html
+  <!-- end tarif -->
 
   <!-- get -->
-	//= html/uz/get.html
-	<!-- end get -->
+  //= html/uz/get.html
+  <!-- end get -->
 
-	<!-- footer -->
-	//= html/uz/footer.html
-	<!-- end footer -->
+  <!-- footer -->
+  //= html/uz/footer.html
+  <!-- end footer -->
 
   <!-- modal -->
-	//= html/uz/modal.html
-	<!-- end modal -->
+  //= html/uz/modal.html
+  <!-- end modal -->
 
-	<script defer src="js/script.js?v=5"></script>
-  <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script defer src="js/script.js?v=6"></script>
+  <script defer src="js/swiper-bundle.min.js"></script>
   <script defer>
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
       var swiper = new Swiper('.swiper-container', {
-      // Optional parameters
-      direction: 'horizontal',
-      slidesPerView: 1,
-      spaceBetween: 20,
-      loop: true,
-      mousewheel: true,
-      autoplay: {
-        delay: 5000,
-      },
-      breakpoints: {
-        992: {
-          slidesPerView: 3,
-          spaceBetween: 30,
-          centeredSlides: true
-        }
-      },
+        // Optional parameters
+        direction: 'horizontal',
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        mousewheel: true,
+        autoplay: {
+          delay: 5000,
+        },
+        breakpoints: {
+          992: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            centeredSlides: true
+          }
+        },
 
-      // If we need pagination
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
 
-    });});
+      });
+    });
   </script>
 
   <!-- leeloo init code -->
   <script>
-    window.LEELOO = function(){
-        window.LEELOO_INIT = { id: '5ee9cd6ed186d8000d9d440f' };
-        var js = document.createElement('script');
-        js.src = 'https://app.leeloo.ai/init.js';
-        js.async = true;
-        document.getElementsByTagName('head')[0].appendChild(js);
+    window.LEELOO = function () {
+      window.LEELOO_INIT = { id: '5ee9cd6ed186d8000d9d440f' };
+      var js = document.createElement('script');
+      js.src = 'https://app.leeloo.ai/init.js';
+      js.async = true;
+      document.getElementsByTagName('head')[0].appendChild(js);
     }; LEELOO();
-    </script>
-<!-- end leeloo init code -->
+  </script>
+  <!-- end leeloo init code -->
 
 </body>
+
 </html>

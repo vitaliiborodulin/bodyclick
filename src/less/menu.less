@@ -74,3 +74,22 @@
     }
   }
 }
+
+.seven-days {
+  .menu {
+    li {
+      background: url(../img/seven-days/svg/right-green.svg) no-repeat right center;
+    }
+
+    &__phone {
+      a {
+        &:first-child {
+          &::before {
+            animation: pulse-green 2s infinite;
+            background: url(../img/seven-days/svg/phone.svg) no-repeat;
+          }
+        }
+      }
+    }
+  }
+}

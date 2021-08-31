@@ -115,18 +115,18 @@ exports.imagesDev = imagesDev;
 
 const imagesProd = () => {
 	return gulp.src("./src/img/**/*.*")
-	.pipe(imagemin([
-    imagemin.gifsicle({interlaced: true}),
-    imagemin.mozjpeg({quality: 75, progressive: true}),
-    imagemin.optipng({optimizationLevel: 5}),
-    imagemin.svgo({
-			plugins: [
-					{removeViewBox: true},
-					{cleanupIDs: false}
-			]
-    })
-	]))
-	.pipe(gulp.dest(dist + "img"))
+		.pipe(imagemin([
+			imagemin.gifsicle({ interlaced: true }),
+			imagemin.mozjpeg({ quality: 75, progressive: true }),
+			imagemin.optipng({ optimizationLevel: 5 }),
+			imagemin.svgo({
+				plugins: [
+					{ removeViewBox: true },
+					{ cleanupIDs: false }
+				]
+			})
+		]))
+		.pipe(gulp.dest(dist + "img"))
 }
 
 exports.imagesProd = imagesProd;

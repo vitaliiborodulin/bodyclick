@@ -170,3 +170,57 @@
   }
 
 }
+
+.seven-days {
+  .specialists {
+    &__title {
+      &::before {
+        background-color: @green;
+      }
+    }
+
+    &__formula {
+      background-color: #002E63;
+    }
+
+    &__item {
+      .size(4);
+      .size-lg(6);
+      .size-sm(12);
+      height: unset;
+      flex-direction: column;
+    }
+
+    &__image {
+      width: 100%;
+      height: unset;
+      overflow: initial;
+      .md-block({
+        float: none;
+        padding-right: 0;
+      });
+      .sm-block({
+        float: left;
+        width: 134px;
+        height: 156px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+      });
+
+      img {
+        width: 100%;
+        height: auto;      
+        .sm-block({
+          width: 134px;
+          height: 156px;
+        });
+      }
+    }
+
+    &__text {
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}

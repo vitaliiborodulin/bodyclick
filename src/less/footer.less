@@ -64,3 +64,21 @@
     }
   }
 }
+
+.seven-days {
+  .footer {
+    &__phone {
+      a {
+        &:hover {
+          color: @green;
+        }
+        &:first-child {
+          &::before {
+            animation: pulse-green 2s infinite;
+            background: url(../img/seven-days/svg/phone.svg) no-repeat;
+          }
+        }
+      }
+    }
+  }
+}

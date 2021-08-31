@@ -45,7 +45,7 @@
     max-width: 484px;
     font-size: 20px;
     line-height: 128.03%;
-    text-transform: lowercase;
+    // text-transform: lowercase;
     color: rgba(47, 43, 50, 0.7);
     .md-block({
       margin-bottom: 23px;
@@ -140,6 +140,42 @@
 
     &__iphone::after {
       content: 'выиграй';
+    }
+  }
+}
+
+.seven-days {
+  .hero {
+    background: @grey url(../img/seven-days/hero-bg.jpg) no-repeat center/cover;
+    .md(min-height, 580px);
+    .sm-block({
+      min-height: 505px;
+      background: @grey url(../img/seven-days/hero-mob-bg.jpg) no-repeat center/cover;
+    });
+
+    &__content {
+      .md(padding-bottom, 225px);
+      .sm(padding-bottom, 194px);
+    }
+
+    h1 {
+      span {
+        max-width: 800px;
+        min-height: 126px;
+        .md(min-height, 51px);
+        color: #EA5B75;
+      }
+    }
+  }
+}
+
+.seven-days.content-ru {
+  .hero {
+    h1 {
+      span {
+        min-height: auto;
+        .md(min-height, auto);
+      }
     }
   }
 }

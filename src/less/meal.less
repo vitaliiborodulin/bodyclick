@@ -72,3 +72,32 @@
     }
   }
 }
+
+.seven-days {
+  .meal {
+    &__title {
+      &::after {
+        background-color: @green;
+      }
+    }
+    &__content {
+      .md(justify-content, center);
+    }
+    &__girl {
+      .md(display, none);
+    }
+    &__food {
+      text-align: center;
+      .size-md(12);
+
+      img {
+        margin-bottom: 0;
+        transform: none;
+        .md-block({
+          width: 100%;
+          height: auto;
+        });
+      }
+    }
+  }
+}

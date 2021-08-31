@@ -59,3 +59,29 @@
 
   }
 }
+
+.seven-days {
+  .get {
+    &__content {
+      .sm(min-height, 380px);
+    }
+
+    &__title {
+      top: 36%;
+      left: 51%;
+
+      .lg-block({
+        left: unset;
+        right: 0;
+      });
+      .sm-block({
+        top: 46%;
+      });
+
+      br {
+        display: none;
+        .lg(display, block);
+      }
+    }
+  }
+}

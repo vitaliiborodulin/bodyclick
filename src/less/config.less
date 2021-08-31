@@ -9,6 +9,7 @@
 @dark_grey: #5D5C63;
 @blue: #077EB9;
 @light_blue: #98B7D7;
+@green: #35B630;
 
 
 @userfont: 'Ubuntu', sans-serif;
@@ -59,6 +60,13 @@
 	color: #fff;
 }
 
+.seven-days {
+	::selection {
+		background-color: @green;
+		color: #fff;
+	}
+}
+
 // input, textarea {
 // 	outline: none;
 // 	&:focus:required:invalid { border: 3px solid @accent }
@@ -105,4 +113,14 @@ section, header, footer {
 
   text-align: center;
   text-transform: uppercase;
+}
+
+.green {
+	color: @green;
+	font-weight: 700;
+}
+
+.red {
+	color: #EA5B75;
+	font-weight: 700;
 }

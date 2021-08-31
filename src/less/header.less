@@ -106,3 +106,36 @@
     .sm(display, block);
   }
 }
+
+.seven-days {
+  .header {
+    &__lang {
+      a:hover {
+        color: @green;
+      }
+      
+      li {
+        &.active {
+          a {
+            color: @green;
+          }
+        }
+      }
+    }
+
+    &__phone {
+      a {
+        &:hover {
+          color: @green;
+        }
+        &:first-child {
+          &::before {
+            background: url(../img/seven-days/svg/phone.svg) no-repeat;
+            color: @green;
+            animation: pulse-green 2s infinite;
+          }
+        }
+      }
+    }
+  }
+}

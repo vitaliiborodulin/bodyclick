@@ -53,7 +53,7 @@
             </h1>
             <p class="hero__descr">построенный на основе 7 лет опыта специалистов
               нашей команды и мощных результатах</p>
-            <a href="#" class="btn hero__btn">Записаться</a>
+            <a href="#form" class="btn hero__btn glightbox" data-glightbox="width: 700; height: auto;">Записаться</a>
           </div>
   
           <div class="hero__girl">
@@ -187,7 +187,7 @@
           тренируйся из любой точки Узбекистана </div>
       </div>
   
-      <a href="#" class="btn steps__btn">остались вопросы</a>
+      <a href="#form" class="btn steps__btn glightbox" data-glightbox="width: 700; height: auto;">остались вопросы</a>
     </div>
   </section>
   <!-- end steps -->
@@ -310,13 +310,13 @@
           <!-- Slides -->
   
           <div class="slider__slide slider__slide--video swiper-slide">
-            <a class="slider__image glightbox" href="https://www.youtube.com/watch?v=1UhBIspxzHU">
+            <a class="slider__image glightbox2" href="https://www.youtube.com/watch?v=1UhBIspxzHU">
               <img src="img/seven-days/slider2-slide1.jpg" alt="" width="302" height="506">
             </a>
           </div>
   
           <div class="slider__slide slider__slide--video swiper-slide">
-            <a class="slider__image glightbox" href="https://www.youtube.com/watch?v=9OQ39V2gHCk">
+            <a class="slider__image glightbox2" href="https://www.youtube.com/watch?v=9OQ39V2gHCk">
               <img src="img/seven-days/slider2-slide2.jpg" alt="" width="302" height="506">
             </a>
           </div>
@@ -458,14 +458,8 @@
   <!-- end footer -->
 
   <!-- modal -->
-  <div id="form" class="wrapper-modal">
-    <div class="overlay"></div>
-    <div class="modal-window">
-      <button class="btn-close">&times;</button>
-      <div class="content">
-        <div class="leeloo-hash-1c5y0q"></div>
-      </div>
-    </div>
+  <div id="form" style="display: none;">
+    <div class="leeloo-hash-8myqlx"></div>
   </div>
   
   <div id="menu" class="wrapper-modal">
@@ -558,7 +552,17 @@
     });
   </script>
 
-
+  <!-- leeloo init code -->
+  <script defer>
+    window.LEELOO = function () {
+      window.LEELOO_INIT = { id: '5ee9cd6ed186d8000d9d440f' };
+      var js = document.createElement('script');
+      js.src = 'https://app.leeloo.ai/init.js';
+      js.async = true;
+      document.getElementsByTagName('head')[0].appendChild(js);
+    }; LEELOO();
+  </script>
+  <!-- end leeloo init code -->
 
 </body>
 

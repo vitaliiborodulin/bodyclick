@@ -7,14 +7,13 @@
   <title>Body Click</title>
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,700&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <!-- <link rel="stylesheet" href="css/swiper-bundle.min.css"> -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/styles.css?v=6">
 </head>
 
@@ -501,72 +500,12 @@
   </div>
   <!-- end modal -->
 
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <!-- <script defer src="js/swiper-bundle.min.js"></script> -->
-  <script defer src="js/script.js?v=6"></script>
-  <script defer>
-    document.addEventListener("DOMContentLoaded", function () {
-
-      var swiper = new Swiper('.swiper-container', {
-        // Optional parameters
-        direction: 'horizontal',
-        slidesPerView: 1,
-        spaceBetween: 20,
-        loop: true,
-        mousewheel: true,
-        autoplay: {
-          delay: 5000,
-        },
-        preloadImages: false,
-        lazy: true,
-        watchSlidesProgress: true,
-        breakpoints: {
-          992: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            centeredSlides: true
-          }
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-
-      });
-
-      var swiperBottom = new Swiper('.swiper-container-bottom', {
-        // Optional parameters
-        direction: 'horizontal',
-        slidesPerView: 1,
-        spaceBetween: 20,
-        loop: true,
-        mousewheel: true,
-        // autoplay: {
-        //   delay: 5000,
-        // },
-        breakpoints: {
-          992: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-            // centeredSlides: true
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          }
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-
-      });
-
-    });
-  </script>
+  <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+  <script defer src="js/swiper-bundle.min.js"></script>
+  <script defer src="js/main.js?v=7"></script>
 
   <!-- leeloo init code -->
-  <script defer>
+  <script>
     window.LEELOO = function () {
       window.LEELOO_INIT = { id: '5ee9cd6ed186d8000d9d440f' };
       var js = document.createElement('script');

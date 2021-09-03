@@ -23,3 +23,7 @@ const lightbox = GLightbox({
   keyboardNavigation: false,
   draggable: false
 });
+
+const lightboxTopSlider = GLightbox({
+  selector: '.glightbox2'
+});

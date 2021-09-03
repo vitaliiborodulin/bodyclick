@@ -83,7 +83,7 @@ const jsDev = () => {
 	})
 		.pipe(rigger())
 		.pipe(sourcemaps.init())
-		.pipe(concat('script.js'))
+		// .pipe(concat('script.js'))
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(dist + "js"))
 		.pipe(sync.stream())
@@ -96,7 +96,7 @@ const jsProd = () => {
 		base: './src/js/'
 	})
 		.pipe(rigger())
-		.pipe(concat('script.js'))
+		// .pipe(concat('script.js'))
 		.pipe(uglify({
 			toplevel: true
 		}))
@@ -117,7 +117,7 @@ const imagesProd = () => {
 	return gulp.src("./src/img/**/*.*")
 		.pipe(imagemin([
 			imagemin.gifsicle({ interlaced: true }),
-			imagemin.mozjpeg({ quality: 75, progressive: true }),
+			imagemin.mozjpeg({ quality: 95, progressive: true }),
 			imagemin.optipng({ optimizationLevel: 5 }),
 			imagemin.svgo({
 				plugins: [
@@ -149,6 +149,16 @@ const copy = () => {
 }
 
 exports.copy = copy;
+
+const copyCss = () => {
+	return gulp.src("src/css/*.css")
+		.pipe(gulp.dest(dist + "css"))
+		.pipe(sync.stream({
+			once: true
+		}));
+}
+
+exports.copyCss = copyCss;
 
 // Gh-pages
 const deploy = (cb) => {
@@ -184,6 +194,7 @@ const watch = () => {
 	gulp.watch("./src/js/**/*.js", gulp.series(jsDev));
 	gulp.watch("./src/img/**/*", gulp.series(imagesDev));
 	gulp.watch("./src/files/*.*", gulp.series(copy));
+	gulp.watch("./src/css/*.css", gulp.series(copyCss));
 	gulp.watch('./smartgrid.js', grid);
 	gulp.watch([
 		"src/fonts/**/*",
@@ -199,6 +210,7 @@ exports.dev = gulp.series(
 	gulp.parallel(
 		htmlDev,
 		cssDev,
+		copyCss,
 		jsDev,
 		imagesDev,
 		copy
@@ -215,6 +227,7 @@ exports.build = gulp.series(
 	gulp.parallel(
 		htmlProd,
 		cssProd,
+		copyCss,
 		jsProd,
 		imagesProd,
 		copy

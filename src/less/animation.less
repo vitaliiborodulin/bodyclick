@@ -26,3 +26,23 @@
     }
   }
 
+@keyframes tels {
+    100% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(25deg);
+    }
+}
+
+.title-animation-idle {
+    display: block;
+    transform: translate(0, 5rem);
+    transition: all 0.6s ease;
+    opacity: 0;
+
+    &.activate-animation {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}

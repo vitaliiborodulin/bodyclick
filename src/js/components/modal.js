@@ -19,11 +19,15 @@
 // btnCloseForm.addEventListener('click', closeModal);
 
 const lightbox = GLightbox({
-  touchNavigation: false,
-  keyboardNavigation: false,
-  draggable: false
+    touchNavigation: false,
+    keyboardNavigation: false,
+    draggable: false
 });
 
 const lightboxTopSlider = GLightbox({
-  selector: '.glightbox2'
+    selector: '.glightbox2'
+});
+
+const lightboxAwardsSlider = GLightbox({
+    selector: '.glightbox3'
 });

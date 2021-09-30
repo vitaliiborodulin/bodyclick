@@ -15,6 +15,9 @@ $.fn.visible = function(partial) {
 
 $(function() {
 
+    var confetti = new ConfettiGenerator();
+    confetti.render();
+
     $(".title-animation-idle").each(function(i, el) {
         var el = $(el);
         if (el.visible(true)) {
@@ -28,6 +31,13 @@ $(function() {
             var el = $(el);
             if (el.visible(true)) {
                 el.addClass("activate-animation");
+            }
+        });
+
+        $(".slider-awards").each(function(i, el) {
+            var el = $(el);
+            if (el.visible(true)) {
+
             }
         });
 

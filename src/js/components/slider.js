@@ -35,9 +35,9 @@ var swiperBottom = new Swiper('.swiper-container-bottom', {
     spaceBetween: 20,
     loop: true,
     // mousewheel: true,
-    autoplay: {
-        delay: 5000,
-    },
+    // autoplay: {
+    //     delay: 5000,
+    // },
     preloadImages: false,
     lazy: true,
     // watchSlidesProgress: true,

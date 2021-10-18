@@ -15,8 +15,10 @@ $.fn.visible = function(partial) {
 
 $(function() {
 
-    var confetti = new ConfettiGenerator();
-    confetti.render();
+    if ($('body').hasClass('content')) {
+        var confetti = new ConfettiGenerator();
+        confetti.render();
+    }
 
     $(".title-animation-idle").each(function(i, el) {
         var el = $(el);

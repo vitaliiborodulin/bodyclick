@@ -1,8 +1,8 @@
 .hero {
   background: @grey url(../img/hero-bg.jpg) no-repeat center/cover;
-  min-height: 1026px;
-  overflow-x: hidden;
-  .md(min-height, 656px);
+  // min-height: 1026px;
+  overflow: hidden;
+  // .md(min-height, 656px);
   .sm-block({
     background: @grey url(../img/hero-mob-bg.jpg) no-repeat center/cover;
   });
@@ -20,6 +20,11 @@
   }
 
   &__text {
+    position: relative;
+    z-index: 5;
+
+    .md(position, static);
+    
     h1 {
       margin-bottom: 40px;
       font-weight: 700;
@@ -45,8 +50,11 @@
     max-width: 484px;
     font-size: 20px;
     line-height: 128.03%;
+    font-weight: 500;
     // text-transform: lowercase;
-    color: rgba(47, 43, 50, 0.7);
+    // color: rgba(47, 43, 50, 0.7);
+    text-shadow: 2px 2px rgba(47, 43, 50, 0.2);
+    color: @accent;
     .md-block({
       margin-bottom: 23px;
       max-width: 280px;
@@ -91,42 +99,47 @@
 
   &__iphone {
     position: absolute;
-    left: 20%;
-    bottom: 0;
+    left: 28%;
+    bottom: -65px;
     z-index: 2;
-    display: flex;
-    align-items: flex-end;
+    width: 274px;
+    // display: flex;
+    // align-items: flex-end;
     .lg-block({
-      left: -80px;
-      width: 285px;
+      left: 0;
+      width: 200px;
     });
 
     &::before {
       position: absolute;
-      left: 110px;
-      top: -27px;
+      right: 3%;
+      top: 46%;
       font-weight: 700;
       font-size: 36px;
       content: 'iPhone 12';
       display: block;
       z-index: 3;
+      color: @blue;
+      // display: none;
       .lg-block({
         font-size: 18px;
-        top: -13px;
-        left: 80px;
+        // top: -13px;
+        // left: 80px;
       });
     }
     &::after {
       position: absolute;
-      left: 110px;
-      top: 13px;
+      right: 3%;
+      top: 40%;
       font-size: 24px;
       content: 'ютиб ол';
       display: block;
       z-index: 3;
+      color: @blue;
+      // display: none;
       .lg-block({
         font-size: 16px;
-        left: 80px;
+        // left: 80px;
       });
     }
   }
@@ -135,8 +148,8 @@
 
 .content-ru {
   .hero {
-    min-height: 1000px;
-    .md(min-height, 656px);
+    // min-height: 1000px;
+    // .md(min-height, 656px);
 
     &__iphone::after {
       content: 'выиграй';

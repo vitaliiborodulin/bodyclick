@@ -2,3 +2,4 @@ node_modules
 addon
 dist
 debug.log
+src/php

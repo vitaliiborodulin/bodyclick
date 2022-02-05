@@ -6,9 +6,7 @@ var swiper = new Swiper('.swiper-container', {
     loop: true,
     // mousewheel: true,
     simulateTouch: true,
-    autoplay: {
-        delay: 5000,
-    },
+    autoplay: true,
     preloadImages: false,
     lazy: true,
     watchSlidesProgress: true,
@@ -24,6 +22,8 @@ var swiper = new Swiper('.swiper-container', {
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
+        dynamicBullets: true,
+        type: 'bullets'
     },
 
     // navigation: {
@@ -33,12 +33,15 @@ var swiper = new Swiper('.swiper-container', {
 
 });
 
+
+// отзывы
 var swiperBottom = new Swiper('.slider-testimonials', {
     // Optional parameters
     direction: 'horizontal',
     slidesPerView: 1,
-    spaceBetween: 20,
+    // spaceBetween: 20,
     loop: true,
+    // autoHeight: true,
     // mousewheel: true,
     // autoplay: {
     //     delay: 5000,
@@ -47,16 +50,27 @@ var swiperBottom = new Swiper('.slider-testimonials', {
     lazy: true,
     // watchSlidesProgress: true,
     breakpoints: {
-        992: {
+        1200: {
             slidesPerView: 4,
-            spaceBetween: 20,
+            // spaceBetween: 20,
+            // centeredSlides: true
+        },
+        1080: {
+            slidesPerView: 3,
+            // spaceBetween: 20,
             // centeredSlides: true
         },
         768: {
-            slidesPerView: 3,
-            spaceBetween: 20,
+            slidesPerView: 2,
+            // spaceBetween: 20,
         }
     },
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -65,6 +79,19 @@ var swiperBottom = new Swiper('.slider-testimonials', {
     },
 
 });
+
+// var feedbackPrev = $('#feedbackPrev')
+// var feedbackNext = $('#feedbackNext')
+
+// feedbackPrev.on('click', function() {
+//     swiperBottom.slidePrev();
+//     console.log(swiperBottom)
+// })
+// feedbackNext.on('click', function() {
+//     swiperBottom.slideNext();
+//     console.log(1)
+// })
+
 
 // awards
 var swiperBottom = new Swiper('.slider-awards', {

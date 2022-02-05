@@ -22,12 +22,12 @@
 		"gulp-less": "^4.0.1",
 		"gulp-rigger": "^0.5.8",
 		"gulp-sourcemaps": "^3.0.0",
+		"gulp-strip-comments": "^2.5.2",
 		"gulp-uglify-es": "^2.0.0",
 		"smart-grid": "^2.1.2"
 	},
 	"dependencies": {
 		"glightbox": "^3.1.0",
-		"swiper": "^6.7.0",
 		"vanilla-lazyload": "^17.4.0"
 	}
 }

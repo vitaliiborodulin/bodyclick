@@ -1,4 +1,5 @@
 const gulp = require('gulp');
+const strip = require('gulp-strip-comments');
 const sync = require('browser-sync');
 
 const uglify = require('gulp-uglify-es').default;
@@ -31,6 +32,7 @@ exports.htmlDev = htmlDev;
 const htmlProd = () => {
     return gulp.src("./src/*.html")
         .pipe(rigger())
+        .pipe(strip())
         .pipe(gulp.dest(dist))
         .pipe(sync.stream());
 }
@@ -115,17 +117,17 @@ exports.imagesDev = imagesDev;
 
 const imagesProd = () => {
     return gulp.src("./src/img/**/*.*")
-        .pipe(imagemin([
-            imagemin.gifsicle({ interlaced: true }),
-            imagemin.mozjpeg({ quality: 95, progressive: true }),
-            imagemin.optipng({ optimizationLevel: 5 }),
-            imagemin.svgo({
-                plugins: [
-                    { removeViewBox: true },
-                    { cleanupIDs: false }
-                ]
-            })
-        ]))
+        // .pipe(imagemin([
+        //     imagemin.gifsicle({ interlaced: true }),
+        //     imagemin.mozjpeg({ quality: 95, progressive: true }),
+        //     imagemin.optipng({ optimizationLevel: 5 }),
+        //     imagemin.svgo({
+        //         plugins: [
+        //             { removeViewBox: true },
+        //             { cleanupIDs: false }
+        //         ]
+        //     })
+        // ]))
         .pipe(gulp.dest(dist + "img"))
 }
 
@@ -136,7 +138,7 @@ const copy = () => {
     return gulp.src([
             "src/fonts/**/*",
             "src/files/**/*",
-            "src/*.php",
+            "src/php/**/*.php",
             "src/favicon.*"
         ], {
             base: 'src'
@@ -192,11 +194,13 @@ const watch = () => {
     gulp.watch("./src/less/**/*.less", gulp.series(cssDev));
     gulp.watch("./src/js/**/*.js", gulp.series(jsDev));
     gulp.watch("./src/img/**/*", gulp.series(imagesDev));
-    gulp.watch("./src/files/*.*", gulp.series(copy));
     gulp.watch("./src/css/*.css", gulp.series(copyCss));
+    gulp.watch("./src/php/**/*.php", gulp.series(copy));
     gulp.watch('./smartgrid.js', grid);
     gulp.watch([
-        "src/fonts/**/*",
+        "./src/fonts/**/*",
+        "./src/files/*.*",
+        // "./src/php/**/*.php",
         // "src/img/**/*",
     ], gulp.series("copy"));
 }

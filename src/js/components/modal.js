@@ -31,3 +31,9 @@ const lightboxTopSlider = GLightbox({
 const lightboxAwardsSlider = GLightbox({
     selector: '.glightbox3'
 });
+
+const lightboxTestimonialsSlider = GLightbox({
+    selector: '.glightbox4',
+    loop: true,
+    fixedNavigation: true
+});

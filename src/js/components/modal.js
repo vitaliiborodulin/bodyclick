@@ -21,8 +21,16 @@
 const lightbox = GLightbox({
     touchNavigation: false,
     keyboardNavigation: false,
-    draggable: false
+    draggable: false,
 });
+
+lightbox.on('open', function(){
+    $('.gnext, .gprev').hide();
+})
+
+lightbox.on('close', function(){
+    $('.gnext, .gprev').show();
+})
 
 const lightboxTopSlider = GLightbox({
     selector: '.glightbox2'
